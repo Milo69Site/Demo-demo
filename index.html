@@ -10,8 +10,13 @@
     <!-- AOS CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <body>
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+
     <header class="bg-dark text-white p-4 text-center sticky-top">
         <h1><span class="sopranos-title">The Sopranos</span>: A Journey into Crime and Family</h1>
     </header>
@@ -25,7 +30,7 @@
                 <h2>Key Characters</h2>
                 <div class="character media mb-4">
                     <a href="https://sopranos.fandom.com/wiki/Tony_Soprano" target="_blank">
-                        <img src="https://static.wikia.nocookie.net/sopranos/images/8/8c/Tony_Soprano_Season_1.png/revision/latest/scale-to-width/360?cb=20231023222532" alt="Tony Soprano" class="character-image mr-3 rounded-circle img-fluid" style="width: 100px; height: 100px;">
+                        <img src="https://static.wikia.nocookie.net/sopranos/images/c/ca/Tony_Soprano_Season_2.png/revision/latest/scale-to-width/360?cb=20231023222546" alt="Tony Soprano" class="character-image mr-3 rounded-circle img-fluid" style="width: 100px; height: 100px;">
                     </a>
                     <div class="media-body">
                         <h3>Tony Soprano</h3>
@@ -55,6 +60,16 @@
                 <h2>Seasons Overview</h2>
                 <p>The series spans six seasons, chronicling the complex relationships within the Soprano family and their associates, the impact of Tony’s leadership on his personal and professional life, and the ultimate consequences of living a life of crime. The storyline weaves through various arcs, from power struggles within the mob, betrayals, and the impact of Tony's actions on his family, to his constant struggle with mental health.</p>
             </section>
+            <section class="themes" data-aos="fade-up">
+                <h2>Themes of The Sopranos</h2>
+                <p>*The Sopranos* delves deeply into various themes such as:</p>
+                <ul>
+                    <li><strong>Identity:</strong> The struggle of balancing personal and professional identities is a recurring theme, especially for Tony as he navigates his dual roles as a family man and a mob leader.</li>
+                    <li><strong>Family Dynamics:</strong> The show explores the complexities of familial relationships, depicting both loyalty and betrayal within the Soprano family and their associates.</li>
+                    <li><strong>Mental Health:</strong> Tony's journey through therapy highlights the stigma around mental health, showcasing his battles with anxiety and depression.</li>
+                    <li><strong>Morality and Ethics:</strong> The series challenges viewers to ponder moral dilemmas, questioning what constitutes right and wrong within the criminal underworld.</li>
+                </ul>
+            </section>
         </article>
     </main>
     <footer class="bg-dark text-white text-center p-4">
@@ -67,6 +82,59 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
         AOS.init();
+    </script>
+    <!-- Particles.js Configuration -->
+    <script>
+      particlesJS("particles-js", {
+        "particles": {
+          "number": {
+            "value": 50,
+            "density": {
+              "enable": true,
+              "value_area": 800
+            }
+          },
+          "color": {
+            "value": "#ffffff"
+          },
+          "shape": {
+            "type": "circle",
+            "stroke": {
+              "width": 0,
+              "color": "#000000"
+            }
+          },
+          "opacity": {
+            "value": 0.5,
+            "random": true
+          },
+          "size": {
+            "value": 3,
+            "random": true
+          },
+          "line_linked": {
+            "enable": false
+          },
+          "move": {
+            "enable": true,
+            "speed": 1,
+            "direction": "none",
+            "random": true,
+            "out_mode": "out",
+            "bounce": false
+          }
+        },
+        "interactivity": {
+          "detect_on": "canvas",
+          "events": {
+            "onclick": {
+              "enable": true,
+              "mode": "push"
+            }
+          }
+        },
+        "retina_detect": true
+      });
     </script>
 </body>
 </html>

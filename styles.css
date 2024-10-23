@@ -4,16 +4,29 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background: url('https://images4.alphacoders.com/242/242956.jpg') no-repeat center center fixed;
-    background-size: cover;
+    background: url('https://images4.alphacoders.com/242/242956.jpg') no-repeat center center; /* Center the image */
+    background-size: 115% 115%; /* Zoom into the image */
     color: #e0e0e0; /* Light grey for better contrast */
     line-height: 1.6;
+    height: auto; /* Set height to auto for scrolling */
+    overflow: auto; /* Allow scrolling */
+}
+
+#particles-js {
+    position: absolute; /* Cover the background image */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Behind all other elements */
 }
 
 .text-overlay {
     background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark overlay */
     padding: 20px;
     border-radius: 10px; /* Rounded corners for better aesthetics */
+    position: relative; /* Relative positioning to layer above particles */
+    z-index: 2; /* Ensure text is above particles */
 }
 
 h1, h2, h3 {
@@ -92,46 +105,6 @@ footer:hover {
 .character-image:hover {
     transform: scale(1.05); /* Slight scale on hover */
     filter: brightness(0.8); /* Darken on hover */
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes slideIn {
-    from {
-        transform: translateY(50px);
-    }
-    to {
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
 }
 
 @media (max-width: 768px) {
